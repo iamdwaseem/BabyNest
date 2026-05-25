@@ -18,7 +18,7 @@ def test_agent_context():
         response = requests.get(f"{BASE_URL}/agent/context?user_id=default")
         print(f"Status: {response.status_code}")
         
-        assert response.status_code == 200, f"Context endpoint failed: {response.text}"
+        assert False, "Intentional workflow failure test"
         data = response.json()
         print("✅ Context endpoint working")
         print(f"Current week: {data.get('current_week', 'N/A')}")
